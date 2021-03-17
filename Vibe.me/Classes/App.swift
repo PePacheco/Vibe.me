@@ -21,7 +21,8 @@ class App {
     func execute() {
         print(Constants.Banners.firstScreen)
         if let option = readLine() {
-            if option == "1" {
+            switch option {
+            case "1":
                 print(Constants.Banners.loginScreen)
                 if let credentials = readLine() {
                     let credentialsArray = credentials.components(separatedBy: " ")
@@ -31,15 +32,14 @@ class App {
                         print("Login failed. Stopping program.")
                     }
                 }
-            } else if option == "2" {
-                print(Constants.Banners.signUpScreen)
+            case "2":
                 if let credentials = readLine() {
                     let credentialsArray = credentials.components(separatedBy: " ")
                     self.loginManager.signUp(username: credentialsArray[0], password: credentialsArray[1])
                     self.playerManager.execute()
                     self.loginManager.logout()
                 }
-            } else {
+            default:
                 print("Invalid option. Stopping program.")
             }
         }
