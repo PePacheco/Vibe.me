@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+var playerManager = PlayerManager()
+playerManager.run()
