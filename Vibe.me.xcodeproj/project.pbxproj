@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DB390992602871500CB1238 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB390982602871500CB1238 /* App.swift */; };
+		6DB3909D26028D0500CB1238 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3909C26028D0500CB1238 /* LoadData.swift */; };
 		6DD01126260261B500FDF440 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD01125260261B500FDF440 /* main.swift */; };
 		6DD011322602626C00FDF440 /* PlayerMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD011312602626C00FDF440 /* PlayerMP3.swift */; };
 		6DD011362602628E00FDF440 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD011352602628E00FDF440 /* PlayerManager.swift */; };
@@ -28,6 +30,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6DB390982602871500CB1238 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		6DB3909B26028CD600CB1238 /* profiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profiles.json; sourceTree = "<group>"; };
+		6DB3909C26028D0500CB1238 /* LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		6DD01122260261B400FDF440 /* Vibe.me */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Vibe.me; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD01125260261B500FDF440 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6DD011312602626C00FDF440 /* PlayerMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMP3.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		6DD01143260267C800FDF440 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6DD01147260275A800FDF440 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6DD0114B260275B400FDF440 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		6DD0114F26027C6800FDF440 /* profiles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profiles.json; sourceTree = "<group>"; };
 		6DD0115426027E7700FDF440 /* Drive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drive.mp3; sourceTree = "<group>"; };
 		6DD0115526027E7800FDF440 /* example.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = example.mp3; sourceTree = "<group>"; };
 		6DD0115626027E7800FDF440 /* African.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = African.mp3; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				6DD01143260267C800FDF440 /* Constants.swift */,
+				6DB3909C26028D0500CB1238 /* LoadData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				6DD011312602626C00FDF440 /* PlayerMP3.swift */,
 				6DD011352602628E00FDF440 /* PlayerManager.swift */,
+				6DB390982602871500CB1238 /* App.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -115,7 +121,7 @@
 		6DD0114E26027B3300FDF440 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6DD0114F26027C6800FDF440 /* profiles.json */,
+				6DB3909B26028CD600CB1238 /* profiles.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 				6DD01126260261B500FDF440 /* main.swift in Sources */,
 				6DD011322602626C00FDF440 /* PlayerMP3.swift in Sources */,
 				6DD011362602628E00FDF440 /* PlayerManager.swift in Sources */,
+				6DB3909D26028D0500CB1238 /* LoadData.swift in Sources */,
 				6DD01148260275A800FDF440 /* User.swift in Sources */,
 				6DD01144260267C800FDF440 /* Constants.swift in Sources */,
+				6DB390992602871500CB1238 /* App.swift in Sources */,
 				6DD0114C260275B400FDF440 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

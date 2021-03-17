@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Music{
+struct Music {
     var name: String
     var fileName: String
 }
