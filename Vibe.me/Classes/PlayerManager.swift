@@ -40,10 +40,9 @@ class PlayerManager {
         }
     }
     
-    func run() {
+    func execute() {
         while isRunningApp {
-            print("Please type the name of a song in the following list:")
-            print("To finish the app, type end")
+            print(Constants.Banners.musicSelection)
             if let song = readLine() {
                 if player.setSong(song: song) {
                     isRunningSong = true

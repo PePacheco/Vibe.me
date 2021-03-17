@@ -18,7 +18,11 @@ struct Constants {
 
         """
         
-        static let loginBanner = ""
+        static let musicSelection = """
+        ### TYPE THE ACTION YOU WANT TO DO ###
+
+        [] To exit the program, type [end]
+        [] To choose a song, type the song code shown below
+        """
     }
-    
 }
