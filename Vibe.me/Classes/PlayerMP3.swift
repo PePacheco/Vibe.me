@@ -16,7 +16,7 @@ class PlayerMP3 {
     }
     
     func setSong(song: String) -> Bool {
-        let path = "/Users/pedropacheco/dev/AppleAcademy/test-audio/test-audio/songs/\(song).mp3"
+        let path = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/songs/\(song).mp3"
         let url = URL(fileURLWithPath: path)
         do {
             self.audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -27,9 +27,9 @@ class PlayerMP3 {
     }
     
     func play() {
-        let currTime = self.audioPlayer.currentTime
+        let currTime = self.audioPlayer.deviceCurrentTime
         if currTime > 0.0 {
-            self.audioPlayer.play(atTime: currTime + 0.01)
+            self.audioPlayer.play(atTime: currTime)
         } else {
             self.audioPlayer.prepareToPlay()
             self.audioPlayer.play()
