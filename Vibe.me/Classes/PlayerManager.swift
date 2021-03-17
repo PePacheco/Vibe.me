@@ -20,7 +20,11 @@ class PlayerManager {
     
     func playSong() {
         while isRunningSong {
-            print("To play that song press 1, to pause press 2, to change the song press 3")
+            print("""
+
+                    To play that song press 1, to pause press 2, to change the song press 3
+
+                """)
             if let command = readLine() {
                 switch command {
                 case "1":
