@@ -15,6 +15,7 @@
 		6DD01144260267C800FDF440 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD01143260267C800FDF440 /* Constants.swift */; };
 		6DD01148260275A800FDF440 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD01147260275A800FDF440 /* User.swift */; };
 		6DD0114C260275B400FDF440 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD0114B260275B400FDF440 /* Music.swift */; };
+		DE3F0166260291ED002BE898 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0165260291ED002BE898 /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		6DD0115926027E7A00FDF440 /* christmas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = christmas.mp3; sourceTree = "<group>"; };
 		6DD0115A26027E7A00FDF440 /* Justhea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Justhea.mp3; sourceTree = "<group>"; };
 		6DD0115B26027E7E00FDF440 /* Destination.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Destination.mp3; sourceTree = "<group>"; };
+		DE3F0165260291ED002BE898 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				6DD011312602626C00FDF440 /* PlayerMP3.swift */,
 				6DD011352602628E00FDF440 /* PlayerManager.swift */,
 				6DB390982602871500CB1238 /* App.swift */,
+				DE3F0165260291ED002BE898 /* LoginManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				6DD011362602628E00FDF440 /* PlayerManager.swift in Sources */,
 				6DB3909D26028D0500CB1238 /* LoadData.swift in Sources */,
 				6DD01148260275A800FDF440 /* User.swift in Sources */,
+				DE3F0166260291ED002BE898 /* LoginManager.swift in Sources */,
 				6DD01144260267C800FDF440 /* Constants.swift in Sources */,
 				6DB390992602871500CB1238 /* App.swift in Sources */,
 				6DD0114C260275B400FDF440 /* Music.swift in Sources */,
@@ -331,7 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3XP27NL574;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -342,7 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3XP27NL574;
+				DEVELOPMENT_TEAM = 5MVGTUBM8B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
