@@ -22,7 +22,9 @@ class PlayerManager {
         while isRunningSong {
             print("""
 
-                    To play that song press 1, to pause press 2, to change the song press 3
+                [1] => Play the song
+                [2] => Pause the song
+                [3] => Change de song
 
                 """)
             if let command = readLine() {
