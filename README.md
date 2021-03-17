@@ -6,6 +6,6 @@ More features to come soon, stay tuned!
 ## Installation
 ```bash
 Fork this project
-git clone https://github.com/{your_profile}/Vibe.me-iOS.git
+git clone https://github.com/PePacheco/Vibe.me-iOS.git
 ```
 

@@ -8,4 +8,5 @@
 import Foundation
 
 var playerManager = PlayerManager()
+print(Constants.Banners.mainBanner)
 playerManager.run()
