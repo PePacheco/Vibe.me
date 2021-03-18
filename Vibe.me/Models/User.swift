@@ -7,7 +7,26 @@
 
 import Foundation
 
-struct User: Codable {
+class User: Codable {
     var username: String
     var password: String
+    var favoriteSongs: [Song]
+    
+    init(username: String, password: String) {
+        self.username = username
+        self.password = password
+        self.favoriteSongs = []
+    }
+    
+    func addFavoriteSong(newSong: Song) {
+        let contains = favoriteSongs.contains { song in
+            song.name == newSong.name
+        }
+        if !contains {
+            favoriteSongs.append(newSong)
+            print("\nMusic added to your playlist.\n")
+        } else {
+            print("\nThis song is already in your playlist.\n")
+        }
+    }
 }

@@ -9,20 +9,33 @@ import Foundation
 
 class LoginManager {
     var users: [User]
+    var currentUser: User?
     
     init() {
         self.users = boot(filename: "profiles.json")
     }
     
+    func addFavoriteSong(newSong: Song) {
+        let user = users.first() { user in
+            user.username == currentUser?.username && user.username == currentUser?.username
+        }
+        if let user = user {
+            user.addFavoriteSong(newSong: newSong)
+        }
+    }
+    
     func signUp(username: String, password: String) {
-        users.append(User(username: username, password: password))
+        let user = User(username: username, password: password)
+        users.append(user)
+        self.currentUser = user
     }
     
     func login(username: String, password: String) -> Bool {
         let user = users.first {user in
             return user.username == username && user.password == password
         }
-        if let _ = user {
+        if let user = user {
+            self.currentUser = user
             return true
         }
         return false
