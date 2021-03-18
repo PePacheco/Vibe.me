@@ -53,7 +53,7 @@ class PlayerManager {
                 if player.setSong(song: song) {
                     isRunningSong = true
                     self.playSong()
-                } else if song == "end" {
+                } else if song == "0" {
                     isRunningApp = false
                 } else {
                     print("This song does not exists")
