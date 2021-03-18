@@ -18,16 +18,9 @@ struct Constants {
         ▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️
 
         ▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️
-        ▫️▫️▫️            \(Greeting(date: Date()))             ▫️▫️▫️
-        ▫️▫️▫️       TODAY IS  \(DateFormat(date: Date()))       ▫️▫️▫️
+        ▫️▫️▫️            \(Greeting(date: Date()))
+        ▫️▫️▫️       TODAY IS  \(DateFormat(date: Date()))      
         ▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️▫️
-
-        """
-        
-        static let musicSelection = """
-
-        [?] To choose a song, type the song code
-        [0] => Exit the program
 
         """
 
@@ -36,6 +29,12 @@ struct Constants {
         [1] => Log in
         [2] => Sign up
         
+        """
+        
+        static let chooseListScreen = """
+        [x] => Exit the app
+        [1] => All songs
+        [2] => Your Favorite Songs
         """
     }
 }

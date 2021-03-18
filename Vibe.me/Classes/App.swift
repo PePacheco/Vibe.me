@@ -39,7 +39,8 @@ class App {
             if let password = readLine() {
                 if self.loginManager.login(username: username, password: password) {
                     print("\n▫️ Login Verified Successfully, Welcome \(username) ▫️\n")
-                    self.playerManager.execute()
+                    self.playerManager.execute(loginManager: loginManager)
+                    self.loginManager.logout()
                 } else {
                     print("User not found or incorrect password. Stopping the program.")
                 }
@@ -54,7 +55,7 @@ class App {
             if let password = readLine() {
                 print("\n▫️ Signing Up Ocurred Successfully, Welcome \(username) ▫️\n")
                 self.loginManager.signUp(username: username, password: password)
-                self.playerManager.execute()
+                self.playerManager.execute(loginManager: loginManager)
                 self.loginManager.logout()
             }
         }
