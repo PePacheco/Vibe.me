@@ -23,24 +23,39 @@ class App {
         if let option = readLine() {
             switch option {
             case "1":
-                print(Constants.Banners.loginScreen)
-                if let credentials = readLine() {
-                    let credentialsArray = credentials.components(separatedBy: " ")
-                    if self.loginManager.login(username: credentialsArray[0], password: credentialsArray[1]){
-                        self.playerManager.execute()
-                    } else {
-                        print("Login failed. Stopping program.")
-                    }
-                }
+                self.logIn()
             case "2":
-                if let credentials = readLine() {
-                    let credentialsArray = credentials.components(separatedBy: " ")
-                    self.loginManager.signUp(username: credentialsArray[0], password: credentialsArray[1])
-                    self.playerManager.execute()
-                    self.loginManager.logout()
-                }
+                self.signUp()
             default:
                 print("Invalid option. Stopping program.")
+            }
+        }
+    }
+    
+    func logIn() {
+        print("\n▫️ Type your USERNAME:")
+        if let username = readLine() {
+            print("\n▫️ Type your PASSWORD:")
+            if let password = readLine() {
+                if self.loginManager.login(username: username, password: password) {
+                    print("\n▫️ Login Verified Successfully, Welcome \(username) ▫️\n")
+                    self.playerManager.execute()
+                } else {
+                    print("User not found or incorrect password. Stopping the program.")
+                }
+            }
+        }
+    }
+    
+    func signUp() {
+        print("\n▫️ Type your USERNAME:")
+        if let username = readLine() {
+            print("\n▫️ Type your PASSWORD:")
+            if let password = readLine() {
+                print("\n▫️ Signing Up Ocurred Successfully, Welcome \(username) ▫️\n")
+                self.loginManager.signUp(username: username, password: password)
+                self.playerManager.execute()
+                self.loginManager.logout()
             }
         }
     }
