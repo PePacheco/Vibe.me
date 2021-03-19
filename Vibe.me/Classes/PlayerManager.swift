@@ -23,14 +23,15 @@ class PlayerManager {
     }
     
     func playSong(loginManager: LoginManager) {
+        isRunningSong = true
         while isRunningSong {
             print(Constants.Banners.clear)
             print("""
 
-                [1] => Play the song
-                [2] => Pause the song
-                [3] => Change de song
-                [4] => Favorite the song
+                [1] => Play the song ▶️
+                [2] => Pause the song ⏸
+                [3] => Change de song ⏹
+                [4] => Favorite the song ❤️
 
                 """)
             if let command = readLine() {
@@ -49,7 +50,8 @@ class PlayerManager {
                     loginManager.addFavoriteSong(newSong: self.player.currentSong!)
                     break
                 default:
-                    print("\nI can't recognize this command, please try again\n")
+                    print(Constants.Banners.clear)
+                    print("❌I can't recognize this command, please try again❌")
                 }
             }
         }
@@ -66,12 +68,14 @@ class PlayerManager {
                         isRunningSong = true
                         self.playSong(loginManager: loginManager)
                     } else {
-                        print("\nThis song does not exists\n")
+                        print(Constants.Banners.clear)
+                        print("❌This song does not exists❌")
                     }
                 } else if index == "x" {
                     isRunningAllSongs = false
                 } else {
-                    print("\nNot a valid entry.\n")
+                    print(Constants.Banners.clear)
+                    print("❌Not a valid entry❌")
                 }
             }
         }
@@ -88,19 +92,25 @@ class PlayerManager {
                         isRunningFavoriteSongs = true
                         self.playSong(loginManager: loginManager)
                     } else {
-                        print("\nThis song does not exists\n")
+                        print(Constants.Banners.clear)
+                        print("❌This song does not exists❌")
                     }
                 } else if index == "x" {
                     isRunningFavoriteSongs = false
                 } else {
-                    print("\nNot a valid entry.\n")
+                    print(Constants.Banners.clear)
+                    print("❌Not a valid entry❌")
                 }
             }
         }
     }
     
     func execute(loginManager: LoginManager) {
+        var count = 0
         while isRunningPlayer {
+            if count > 0 {
+                print(Constants.Banners.clear)  
+            }
             print(Constants.Banners.chooseListScreen)
             if let type = readLine() {
                 switch type {
@@ -113,10 +123,12 @@ class PlayerManager {
                 case "x":
                     isRunningPlayer = false
                 default:
-                    print("\nInvalid command.\n")
+                    print(Constants.Banners.clear)
+                    print("❌Invalid command❌")
                     break
                 }
             }
+            count += 1
         }
     }
 }

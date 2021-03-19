@@ -42,7 +42,7 @@ class LoginManager {
     }
     
     func logout() {
-        let filePath = "/Users/santiago/Vibe.me-IOS/Vibe.me/Resources/profiles.json"
+        let filePath = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/Resources/profiles.json"
         let file = URL(fileURLWithPath: filePath)
         do {
             let encoder = JSONEncoder()
