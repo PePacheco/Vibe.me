@@ -21,7 +21,7 @@ class PlayerMP3 {
     
     func getSongsList() -> String {
         var list = "▫️List of songs available:\n"
-        list += "[x] => Go Back\n"
+        list += "[x] => Go Back ❌\n"
         for (index, song) in songs.enumerated() {
             list += "[\(index)] => \(song.name)\n"
         }
@@ -31,7 +31,7 @@ class PlayerMP3 {
     func getSongsList(user: User) -> String {
         var list = "▫️List of songs available:\n"
         let songs = user.favoriteSongs
-        list += "[x] => Go back\n"
+        list += "[x] => Go back ❌\n"
         for (index, song) in songs.enumerated() {
             list += "[\(index)] => \(song.name)\n"
         }
@@ -40,9 +40,8 @@ class PlayerMP3 {
     
     func setSongByUser(index: String, user: User) -> Bool {
         let song = user.favoriteSongs[Int(index)!]
-        print(song)
         self.currentSong = song
-        let path = "Users/santiago/Vibe.me-IOS/Vibe.me/songs/\(song.fileName)"
+        let path = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/songs/\(song.fileName)"
         let url = URL(fileURLWithPath: path)
         do {
             self.audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -56,7 +55,7 @@ class PlayerMP3 {
     func setSong(index: String) -> Bool {
         let song = songs[Int(index)!]
         self.currentSong = song
-        let path = "/Users/santiago/Vibe.me-IOS/Vibe.me/songs/\(song.fileName)"
+        let path = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/songs/\(song.fileName)"
         let url = URL(fileURLWithPath: path)
         do {
             self.audioPlayer = try AVAudioPlayer(contentsOf: url)
