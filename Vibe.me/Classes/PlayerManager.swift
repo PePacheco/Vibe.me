@@ -28,10 +28,11 @@ class PlayerManager {
             print(Constants.Banners.clear)
             print("""
 
-                [1] => Play the song ▶️
-                [2] => Pause the song ⏸
-                [3] => Change de song ⏹
-                [4] => Favorite the song ❤️
+                🔊 \(String(describing: self.player.currentSong!.name)) 🔊
+                [1] => Play ▶️
+                [2] => Pause ⏸
+                [3] => Change ⏹
+                [4] => Favorite ❤️
 
                 """)
             if let command = readLine() {
