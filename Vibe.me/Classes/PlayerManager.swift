@@ -12,14 +12,12 @@ class PlayerManager {
     var isRunningSong: Bool
     var isRunningAllSongs: Bool
     var isRunningPlayer: Bool
-    var isRunningFavoriteSongs: Bool
     
     init() {
         self.player = PlayerMP3()
         self.isRunningAllSongs = true
         self.isRunningSong = true
         self.isRunningPlayer = true
-        self.isRunningFavoriteSongs = true
     }
     
     func playSong(loginManager: LoginManager) {
@@ -58,14 +56,24 @@ class PlayerManager {
         }
     }
     
-    func runAllSongs(loginManager: LoginManager) {
+    func runSongs(loginManager: LoginManager, type: String) {
         isRunningAllSongs = true
         while isRunningAllSongs {
             print(Constants.Banners.clear)
-            print(self.player.getSongsList())
+            if type == "1" {
+                print(self.player.getSongsList())
+            } else {
+                print(self.player.getSongsList(user: loginManager.currentUser!))
+            }
             if let index = readLine() {
                 if index.isNumber {
-                    if player.setSong(index: index) {
+                    var helper: Bool
+                    if type == "1" {
+                        helper = player.setSong(index: index)
+                    } else {
+                        helper = player.setSongByUser(index: index, user: loginManager.currentUser!)
+                    }
+                    if helper {
                         isRunningSong = true
                         self.playSong(loginManager: loginManager)
                     } else {
@@ -74,30 +82,6 @@ class PlayerManager {
                     }
                 } else if index == "x" {
                     isRunningAllSongs = false
-                } else {
-                    print(Constants.Banners.clear)
-                    print("❌Not a valid entry❌")
-                }
-            }
-        }
-    }
-    
-    func runFavoriteSongs(loginManager: LoginManager) {
-        isRunningFavoriteSongs = true
-        while isRunningFavoriteSongs {
-            print(Constants.Banners.clear)
-            print(self.player.getSongsList(user: loginManager.currentUser!))
-            if let index = readLine() {
-                if index.isNumber {
-                    if player.setSongByUser(index: index, user: loginManager.currentUser!) {
-                        isRunningFavoriteSongs = true
-                        self.playSong(loginManager: loginManager)
-                    } else {
-                        print(Constants.Banners.clear)
-                        print("❌This song does not exists❌")
-                    }
-                } else if index == "x" {
-                    isRunningFavoriteSongs = false
                 } else {
                     print(Constants.Banners.clear)
                     print("❌Not a valid entry❌")
@@ -115,11 +99,8 @@ class PlayerManager {
             print(Constants.Banners.chooseListScreen)
             if let type = readLine() {
                 switch type {
-                case "1":
-                    runAllSongs(loginManager: loginManager)
-                    break
-                case "2":
-                    runFavoriteSongs(loginManager: loginManager)
+                case "1", "2":
+                    runSongs(loginManager: loginManager, type: type)
                     break
                 case "x":
                     isRunningPlayer = false
