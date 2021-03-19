@@ -24,6 +24,7 @@ class PlayerManager {
     
     func playSong(loginManager: LoginManager) {
         while isRunningSong {
+            print(Constants.Banners.clear)
             print("""
 
                 [1] => Play the song
@@ -57,6 +58,7 @@ class PlayerManager {
     func runAllSongs(loginManager: LoginManager) {
         isRunningAllSongs = true
         while isRunningAllSongs {
+            print(Constants.Banners.clear)
             print(self.player.getSongsList())
             if let index = readLine() {
                 if index.isNumber {
@@ -78,6 +80,7 @@ class PlayerManager {
     func runFavoriteSongs(loginManager: LoginManager) {
         isRunningFavoriteSongs = true
         while isRunningFavoriteSongs {
+            print(Constants.Banners.clear)
             print(self.player.getSongsList(user: loginManager.currentUser!))
             if let index = readLine() {
                 if index.isNumber {
@@ -110,7 +113,7 @@ class PlayerManager {
                 case "x":
                     isRunningPlayer = false
                 default:
-                    print("Invalid command.")
+                    print("\nInvalid command.\n")
                     break
                 }
             }

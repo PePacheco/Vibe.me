@@ -42,7 +42,7 @@ class PlayerMP3 {
         let song = user.favoriteSongs[Int(index)!]
         print(song)
         self.currentSong = song
-        let path = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/songs/\(song.fileName)"
+        let path = "Users/santiago/Vibe.me-IOS/Vibe.me/songs/\(song.fileName)"
         let url = URL(fileURLWithPath: path)
         do {
             self.audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -56,7 +56,7 @@ class PlayerMP3 {
     func setSong(index: String) -> Bool {
         let song = songs[Int(index)!]
         self.currentSong = song
-        let path = "/Users/pedropacheco/dev/AppleAcademy/Vibe.me/Vibe.me/songs/\(song.fileName)"
+        let path = "/Users/santiago/Vibe.me-IOS/Vibe.me/songs/\(song.fileName)"
         let url = URL(fileURLWithPath: path)
         do {
             self.audioPlayer = try AVAudioPlayer(contentsOf: url)
