@@ -10,6 +10,6 @@ You have a playlist where you can store your favorite songs and access them in t
 ## Installation
 ```bash
 Fork this project
-git clone https://github.com/YOUR-USERNAME/Vibe.me-iOS.git
+git clone https://github.com/YOUR-USERNAME/Vibe.me.git
 ```
 
